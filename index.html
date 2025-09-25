@@ -10,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
     rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,6 +22,12 @@
             <img src="img/logo.svg" alt="logo">
         </a>
         <nav class="nav">
+            <button class="m-menu"><svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="4.5" x2="15" y2="4.5" stroke="white"/>
+            <line y1="8.5" x2="15" y2="8.5" stroke="white"/>
+            <line y1="0.5" x2="15" y2="0.5" stroke="white"/>
+            </svg>
+            </button>
             <ul class="menu">
                 <li class="menu-item">
                     <a href="#" class="menu-link">Главная</a>
@@ -85,7 +94,7 @@
                 </div>
             </div>
             <!-- /.film-info -->
-            <a href="#" class="film-trailer">
+            <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=FeJKZMFJ7NA" href="#" class="film-trailer">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="50" fill="white"/>
                 <g clip-path="url(#clip0_1_158)">
@@ -156,7 +165,10 @@
         <!-- /.seccion -->
     </header>
     <div class="scheme container">
-    <svg class="scheme-svg" width="1170" height="600" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="scheme-svg"
+    viewBox="0 0 1170 600"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_13_374)">
 </g>
 <path class="light" d="M132 115L205.04 48H972.96L1046 115H132Z" fill="url(#paint0_linear_13_374)"/>
@@ -399,5 +411,11 @@
      </div>
      <!-- /.price -->
      <script src="js/scripts.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+     <script>
+    Fancybox.bind('[data-fancybox="video-gallery"]', {
+        
+    });
+</script>
 </body>
 </html>
